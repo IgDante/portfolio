@@ -65,7 +65,7 @@ export const HeroSection = () => {
                     height={404}
                     src={'/images/profile-photo.jpeg'}
                     alt="Foto do perfil"
-                    className="w-[300px] h-[300px] lg:w-[420px] lg:h-[404px] mb-6 lg:mb-0 shadow-2xl rounded-full object-cover"
+                    className="w-[300px] h-[300px] lg:w-[420px] lg:h-[404px] mb-6 lg:mb-0 shadow-2xl rounded-full object-cover "
                 />
             </div>
         </section>
