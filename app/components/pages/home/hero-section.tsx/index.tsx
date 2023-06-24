@@ -5,6 +5,7 @@ import { Button } from "@/app/components/button"
 import Image from "next/image"
 import { HiArrowNarrowRight } from 'react-icons/hi'
 import { TbBrandGithub, TbBrandLinkedin, TbBrandInstagram, TbBrandGmail } from 'react-icons/tb'
+import { HomePageInfo } from "@/app/types/page-info"
 
 const MOCK_CONTACTS = [
     {
@@ -25,6 +26,10 @@ const MOCK_CONTACTS = [
     }
 ]
 
+// type homeSectionProps = {
+//     homeInfo: HomePageInfo
+// }
+
 export const HeroSection = () => {
     const handleContact = () => {
         const contactSection = document.querySelector('#contact')
@@ -34,7 +39,7 @@ export const HeroSection = () => {
     }
 
     return (
-        <section className="w-full lg:h-[755px] bg-hero-image bg-cover bg-center bg-no-repeat flex flex-col justify-end pb-10 sm:pb-32 py-32 lg:pb-[110px]">
+        <div className="w-full lg:h-[755px] bg-hero-image bg-cover bg-center bg-no-repeat flex flex-col justify-end pb-10 sm:pb-32 py-32 lg:pb-[110px]">
             <div className="container flex items-start justify-between flex-col-reverse lg:flex-row">
                 <div className="w-full lg:max-w-[530px]">
                     <p className="font-mono text-emerald-400">Olá, meu nome é Igor e sou</p>
@@ -77,6 +82,6 @@ export const HeroSection = () => {
                     className="w-[300px] h-[300px] lg:w-[420px] lg:h-[404px] mb-6 lg:mb-0 shadow-2xl rounded-full object-cover "
                 />
             </div>
-        </section>
+        </div>
     )
 }
