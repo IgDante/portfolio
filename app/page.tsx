@@ -26,34 +26,7 @@ const getPageData = async (): Promise<HomePageData> => {
           iconSvg
           name
           startDate
-        }
-        highlightProjects {
-          slug
-          thumbnail {
-            url
-          }
-          title
-          shortDescription
-          technologies {
-            name
-          }
-        }
-      }
-      workExperiences {
-        companyLogo {
-          url
-        }
-        role
-        companyName
-        companyUrl
-        startDate
-        endDate
-        description {
-          raw
-        }
-        technologies {
-          name
-        }
+        } 
       }
     }
   `
@@ -64,9 +37,9 @@ const getPageData = async (): Promise<HomePageData> => {
 }
 
 export default async function Home() {
-  // const { page: pageData } = await getPageData();
+  const { page: pageData } = await getPageData();
 
-  // console.log(pageData);
+  console.log(pageData);
 
   return (
     <>
