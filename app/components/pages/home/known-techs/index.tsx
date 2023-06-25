@@ -1,19 +1,19 @@
 import { SectionTitle } from "@/app/components/section-title"
-import { KnowTech } from "./known-tech"
-import { TbBrandReact } from "react-icons/tb"
+import { KnownTech } from "./known-tech"
+import { KnownTech as IKnownTech } from "@/app/types/projects"
 
-export const KnowTechs = () => {
+type KnownTechsProps = {
+    techs: IKnownTech[]
+}
+
+export const KnowTechs = ({ techs }:KnownTechsProps) => {
     return (
         <section className="container py-16">
             <SectionTitle subtitle="competências" title="Conhecimentos" />
 
             <div className="grid grid-cols-[repeat(auto-fit,minmax(264px,1fr))] gap-3 mt-[60px]">
-                {Array.from ({ length: 8 }).map((_, index) => (
-                    <KnowTech key={index} tech={{
-                        icon: <TbBrandReact />,
-                        name: 'React.js',
-                        startDate: '2023-02-01'
-                    }} />
+                {techs?.map((tech) => (
+                    <KnownTech key={tech.name} tech={tech} />
                 ))}
             </div>
         </section>
