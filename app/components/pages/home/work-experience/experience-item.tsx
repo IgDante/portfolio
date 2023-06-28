@@ -4,10 +4,9 @@ import { workExperience } from "@/app/types/work-experience"
 import { ptBR } from "date-fns/locale"
 import Image from "next/image"
 import { differenceInMonths, differenceInYears, format } from "date-fns"
-import { HiArrowNarrowRight } from "react-icons/hi"
 
 type ExperienceItemProps = {
-    experiences: workExperience
+    experience: workExperience
 }
 
 export const ExperienceItem = ({ experience }: ExperienceItemProps) => {
