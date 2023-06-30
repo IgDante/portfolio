@@ -6,6 +6,7 @@ import { FiGlobe } from "react-icons/fi"
 import { Link } from "@/app/components/link"
 import { HiArrowNarrowLeft } from "react-icons/hi"
 import { Project } from "@/app/types/projects"
+import { RichText } from "@/app/components/rich-text"
 
 type ProjectDetailsProps = {
     project: Project
@@ -38,8 +39,8 @@ export const ProjectDetails = ({ project }: ProjectDetailsProps) => {
             </div>
 
             <div className="my-6 sm:my-12 flex items-center gap-2 sm:gap-4 flex-col sm:flex-row">
-                {project?.githubUrl && (
-                    <a href={project.githubUrl} target="_blank">
+                {project?.gitHubUrl && (
+                    <a href={project.gitHubUrl} target="_blank">
                     <Button className="min-w-[180px]">
                         <TbBrandGithub size={20} />
                         Repositório
